@@ -1,1 +1,9 @@
-test 1.
+<script>
+  // 假设当前URL为 "https://example.com/?name=John&age=30" 
+const url = new URL(window.location.href); // 或者你可以直接传入一个URL字符串 
+const name = url.searchParams.get('name'); // "John" 
+const age = url.searchParams.get('age'); // "30" 
+
+console.log(name, age);
+
+</script>
