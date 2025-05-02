@@ -1,9 +1,114 @@
-<script>
-  // 假设当前URL为 "https://example.com/?name=John&age=30" 
-const url = new URL(window.location.href); // 或者你可以直接传入一个URL字符串 
-const name = url.searchParams.get('name'); // "John" 
-const age = url.searchParams.get('age'); // "30" 
+<!DOCTYPE html>
+<html>
 
-console.log(name, age);
+<head>
+    <meta charset="utf-8">
+    <title>NIKE SB</title>
+</head>
 
-</script>
+<body>
+
+    <style>
+        video {
+            display: block;
+            margin: 0 auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+        }
+
+        .topbox {
+            /* 画板 1 */
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            background: rgb(247, 247, 247);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nike {
+            /* svg */
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 2.79%;
+            top: 0%;
+        }
+
+        .user {
+            /* 组合 1 */
+            position: absolute;
+            width: 264px;
+            height: 60px;
+            right: 2.79%;
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            /* background: rgb(247, 247, 247); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .goods {
+            /* 画板 2 */
+            position: absolute;
+            width: 430px;
+            height: 219px;
+            top: 102px;
+        }
+
+        .word {
+            /* 组合 2 */
+            position: absolute;
+            width: 210px;
+            height: 185px;
+            top: 364px;
+        }
+
+        .go {
+            /* 去Nike 耐克看看 */
+            position: absolute;
+            width: 104px;
+            height: 14.08px;
+            top: 427.49px;
+        }
+    </style>
+
+    <div class="topbox">
+        <img src="https://creation.bcmcdn.com/716/appcraft/IMAGE_W2-UGkz6m2_1746160694449.svg" alt="Nike" class="nike">
+        <img src="https://gitee.com/yuanruiqiang/uni_static_yrq/raw/master/user.svg" alt="yuanruiqiang2022@163.com" class="user">
+    </div>
+    <div class="main">
+        <img src="https://creation.bcmcdn.com/716/appcraft/IMAGE_SV83DPZjRZ_1746160694447.svg" alt="Nike SB" class="goods">
+        <img src="https://gitee.com/yuanruiqiang/uni_static_yrq/raw/master/word.svg" alt="Nike Dunk SB Pro acg " class="word">
+        <img id="goImg" src="https://creation.bcmcdn.com/716/appcraft/IMAGE_hlnGcNrGR_1746160694419.svg" alt="Nike app" class="go">
+    </div>
+
+
+    <video muted autoplay="autoplay" onended="this.style.display='none'">
+        <source src="https://gitee.com/yuanruiqiang/uni_static_yrq/raw/master/1.mov" type="video/mp4">
+    </video>
+
+    <script>
+        const goImg = document.getElementById('goImg');
+        goImg.addEventListener('click', function () {
+            window.location.href = 'https://www.nike.com/';
+        });
+    </script>
+</body>
+
+</html>
